@@ -1,25 +1,42 @@
-a {
-    display:block;
-    text-align: center;
-    padding:5px;
-    text-decoration: none;
-    color: black;
-    background-color: #eee;
+.nav-container {
+    list-style-type: none;
+    text-align: right;
+    border-right: 1px solid black;
+    padding: 5px 0;
 }
 
-.active a, .box.active {
-    background-color: yellow;
+.nav-container a {
+    display: block;
+    padding: 5px;
+    background-color: white;
+    text-decoration: none;
+    -webkit-transition:  margin-right .5s, background-color 1s, color 1s;
+    -moz-transition:     margin-right .5s, background-color 1s, color 1s;
+    transition:          margin-right .5s, background-color 1s, color 1s;
+    -o-transition:       margin-right .5s, background-color 1s, color 1s;
 }
-.nav-container, .box-container {
+
+
+.nav-container a.active {
+    margin-right: -5px;
+    background-color: black;
+    color: white;
+    
+}
+
+.box-container {
     position: relative;
     width: 100px;
-    margin: 5px auto;
+    height: 100px;
+    margin: 5px;
     border:1px solid #ddd;
     
 }
-.box-container {
-    height: 100px;
+
+.box.active {
+    background-color: yellow;
 }
+
 .box {
     margin: 4px;
     position: absolute;
@@ -35,6 +52,7 @@ a {
     transition: top 1s, left 1s;
     -o-transition: top 1s, left 1s;
 }
+
 .box:nth-child(odd) {
     top: 100px;
 }
