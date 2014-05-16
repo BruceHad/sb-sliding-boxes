@@ -1,45 +1,191 @@
-.navbar {
-    border-top: 10px solid black;
+/* 
+ * http://colourco.de/complement/5/%23622122
+ * $color1: #143937; // Dark Blue
+ * $color2: #45bea7; // Blue
+ * */
+
+/* Hacks
+-----------------------------------------*/ 
+.clearfix:before, .clearfix:after {
+    content:"";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Basics
+ * */
+
+ body {
+    margin:0; padding: 0;
+    border-top: 5px solid #143937;
+    background: white url('http://www.treerock.me/assets/stripe.png') repeat-x top left;
     padding-top: 25px;
-    background:url('http://treerock.me/assets/stripe.png') repeat-x top left white;
+    min-width: 320px;
 }
 
-.heading {
-    font-family: 'Vollkorn', serif;  
+
+footer {
+    background-color: #143937;
+    color: white;
 }
 
-.heading h1 {
-    font-size: 3em;
-    font-weight: normal;
-    float:left;
-    margin:0 0.5em; 
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.subheading {
-    float:left;
-    margin:1.7em 0 0 0; 
+a:hover, a:active{
+    outline: 1px dotted #999;
+    
 }
 
-/* Sandbox tiles
-------------------------------------*/
+.container {
+    margin: 0 5px;
+    max-width: 768px;
+}
+
+/* Header
+ * */
+
+header h1, header p {
+    font-family: 'Vollkorn', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0; padding:0;
+    text-align:center;
+}
+
+header h1 {
+    font-size: 64px;
+    border-bottom: 1px solid #1c4746;
+}
+
+header p {
+    font-size: 36px;
+    margin-top: -0.7em;
+    text-transform: uppercase;
+}
+
+.sub span{
+    background-color: white;
+    padding: 0 5px;
+}
+
+/* Nav
+ * */
+nav {
+    background-color: #f5f5ff;
+}
+nav li{
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #f5f5ff),
+        color-stop(1, #d8f2f3)
+    );
+    background-image: -o-linear-gradient(bottom, #f5f5ff 0%, #d8f2f3 100%);
+    background-image: -moz-linear-gradient(bottom, #f5f5ff 0%, #d8f2f3 100%);
+    background-image: -webkit-linear-gradient(bottom, #f5f5ff 0%, #d8f2f3 100%);
+    background-image: -ms-linear-gradient(bottom, #f5f5ff 0%, #d8f2f3 100%);
+    background-image: linear-gradient(to bottom, #f5f5ff 0%, #d8f2f3 100%);
+    height: 32px;
+    line-height: 31px;
+}
+
+nav ul {
+    list-style:none;
+    margin: 0; padding: 0;
+}
+
+nav li {
+    float: left;
+    width: 33.33%;
+    border-left: 1px solid white;
+}
+
+nav li:first-child{
+    border:0;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: small;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+/* Full Width
+-----------------------------------------*/
+@media (min-width: 768px){
+	/* Sandbox
+	 * */
+    .container {
+        margin: 0 auto;
+    }
+    .item {
+        /*border: 1px solid red;*/
+    }
+
+} 
+
+/* Sandbox
+ * */
+
 .sandbox {
-    background-color: #ddd;
+    margin: 30px 0;
 }
 
 .item {
-    background-color: white;
-    height: 400px;
-    overflow: auto;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 7.5px -11.25px;
+    color: #143937;
+    border-bottom: 1px solid #45bea7;
+    padding: 0 2px;
+}
+.item:first-child {
+    border-top: 1px solid #45bea7;
+}
+.item p {
+    margin: 0; padding:0;
+    line-height: 1.2;
 }
 
+.i-type {
+    float: left; 
+    width: 90px; 
+    font-size: small; 
+    padding-top: 5px; 
+    padding-left: 20px;
+    background: white url('../images/mark.png') no-repeat top left;
+}
+.i-name {margin: 5px 0 5px 90px;}
+.i-tags {text-align: left;}
+.i-date {text-align: center;}
+.i-links {text-align: right;}
 
-.col:first-child .item{
-    margin-left: -7.5px;
+.i-name a {
+    color: black;
+    font-weight: bold;
 }
 
-.col:last-child .item {
-    margin-right: -7.5px;
+.i-tags, .i-date, .i-links {
+    float:left;
+    font-size: small;
+    margin-bottom: 5px;
+    width: 33.3333333%;
 }
