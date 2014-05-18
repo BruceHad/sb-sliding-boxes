@@ -41,11 +41,12 @@ footer {
 
 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover, a:active{
     outline: 1px dotted #999;
+    text-decoration: none;
     
 }
 
@@ -71,9 +72,10 @@ header h1 {
 }
 
 header p {
-    font-size: 36px;
+    font-size: 24px;
     margin-top: -0.7em;
     text-transform: uppercase;
+    color: #143937;
 }
 
 .sub span{
@@ -110,7 +112,7 @@ nav ul {
 
 nav li {
     float: left;
-    width: 33.33%;
+    width: 50%;
     border-left: 1px solid white;
 }
 
@@ -134,8 +136,8 @@ nav a {
 /* Full Width
 -----------------------------------------*/
 @media (min-width: 768px){
-	/* Sandbox
-	 * */
+    /* Sandbox
+     * */
     .container {
         margin: 0 auto;
     }
@@ -144,48 +146,3 @@ nav a {
     }
 
 } 
-
-/* Sandbox
- * */
-
-.sandbox {
-    margin: 30px 0;
-}
-
-.item {
-    color: #143937;
-    border-bottom: 1px solid #45bea7;
-    padding: 0 2px;
-}
-.item:first-child {
-    border-top: 1px solid #45bea7;
-}
-.item p {
-    margin: 0; padding:0;
-    line-height: 1.2;
-}
-
-.i-type {
-    float: left; 
-    width: 90px; 
-    font-size: small; 
-    padding-top: 5px; 
-    padding-left: 20px;
-    background: white url('../images/mark.png') no-repeat top left;
-}
-.i-name {margin: 5px 0 5px 90px;}
-.i-tags {text-align: left;}
-.i-date {text-align: center;}
-.i-links {text-align: right;}
-
-.i-name a {
-    color: black;
-    font-weight: bold;
-}
-
-.i-tags, .i-date, .i-links {
-    float:left;
-    font-size: small;
-    margin-bottom: 5px;
-    width: 33.3333333%;
-}

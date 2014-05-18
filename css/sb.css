@@ -1,0 +1,108 @@
+h2 {
+    margin: 0; padding:0;
+}
+
+.main {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.col-3 {
+    width: 33.3333%;
+    float: left;
+    padding: 0 15px;
+}
+
+.date {
+    text-align: right;
+    font-size: small;
+    margin: 0; padding: 0;
+    font-weight: bold;
+}
+
+.nav-container {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+.nav-container li {
+    border: 1px solid #ddd;
+    color: #666;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-decoration: none;
+    -moz-transition: margin .5s, background-color 1s, color 1s;
+    transition:      margin .5s, background-color 1s, color 1s;
+    -o-transition:   margin .5s, background-color 1s, color 1s;
+    -webkit-transition:  margin .5s, background-color 1s, color 1s;
+}
+
+.nav-container li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-container .active {
+    margin-right: -5px;
+    margin-left: 5px;
+    background-color: #eee;
+    color: black;
+}
+
+.box-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border:1px solid #ddd;  
+}
+
+
+.box {
+    margin: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    background-color: #eee;
+    -webkit-transition: top 1s, left 1s;
+    -moz-transition: top 1s, left 1s;
+    transition: top 1s, left 1s;
+    -o-transition: top 1s, left 1s;
+}
+
+.box p {
+    margin: 0; padding: 0;
+}
+
+.box:nth-child(odd) {
+    top: 100px;
+}
+.box:nth-child(even) {
+    left: 100px;
+}
+.box.active {
+    top: 0;
+    left: 0;
+}
+
+
+.box.active {
+    background-color: yellow;
+}
+
+
+/*
+
+
+
+
+
+
+
+
+*/
