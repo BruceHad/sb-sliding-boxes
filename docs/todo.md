@@ -1,0 +1,1 @@
+- [ ] Fix columns to prevent horizontal scroll on small screens
